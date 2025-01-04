@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./App.css"; // Assuming you have CSS files like in your original code.
-
+import logo from "./assets/logo.png";
+import moon from "./assets/moon.svg";
+import sun from "./assets/sun.svg";
+import profile from "./assets/profile.jpg";
+import resume from "./assets/Resume.pdf";
 const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Check for saved theme in localStorage
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       setIsDarkMode(savedTheme === "dark");
@@ -14,10 +17,7 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    // Apply theme to document element
     document.documentElement.setAttribute("data-theme", isDarkMode ? "dark" : "light");
-
-    // Save theme in localStorage
     localStorage.setItem("theme", isDarkMode ? "dark" : "light");
   }, [isDarkMode]);
 
@@ -43,8 +43,8 @@ const App = () => {
           <div className="container">
             {/* Logo */}
             <h1 id="logo">
-              <a href="https://github.com/CommunityPro/portfolio-html">
-                <img src="./assets/logo.png" alt="Your Logo" />
+              <a href="https://github.com/sujith017">
+                <img src={logo} alt="Your Logo" />
               </a>
             </h1>
             {/* Navbar links */}
@@ -53,7 +53,7 @@ const App = () => {
               <li><a className="nav-link" href="#">CONTACT</a></li>
               <li><a className="nav-link" href="#">BLOG</a></li>
               <li>
-                <a className="nav-link btn btn-primary" href="https://github.com/CommunityPro/portfolio-html">
+                <a className="nav-link btn btn-primary" href={resume}>
                   RESUME <i className="fas fa-arrow-right"></i>
                 </a>
               </li>
@@ -66,8 +66,8 @@ const App = () => {
                   onChange={toggleTheme}
                 />
                 <label className="toggle-icons" htmlFor="switch">
-                  <img className="moon" src="assets/moon.svg" alt="moon" />
-                  <img className="sun" src="assets/sun.svg" alt="sun" />
+                  <img className="moon" src={moon} alt="moon" />
+                  <img className="sun" src= {sun} alt="sun" />
                 </label>
               </div>
             </ul>
@@ -81,16 +81,15 @@ const App = () => {
         </nav>
 
         <section className="header-container">
-          <img className="profile-image" src="assets/profile-image.svg" alt="Profile" />
-          <h1>Hi I'm Franklin</h1>
+          <img className="profile-image" src={profile} alt="Profile" />
+          <h1>Hi I'm Sujith </h1>
 
           <div className="content-text">
-            <h2>Building digital</h2>
-            <h2>products, brands, and experience.</h2>
+            <h2>Full Stack Developer</h2>
 
-            <p>A Frontend Developer and Visual Designer with experience in web design, brand identity, and product design.</p>
+            <p>A Full Stack Developer and ML Engineer with experience in web development, ML models.</p>
           </div>
-          <a href="https://github.com/CommunityPro/portfolio-html" className="btn btn-secondary" target="_blank">
+          <a href="mailto:sujithb934@gmail.com" className="btn btn-secondary" target="_blank">
             Connect With Me
           </a>
         </section>
@@ -101,7 +100,7 @@ const App = () => {
         <div className="division"></div>
         <div className="content-text">
           <h2>Projects</h2>
-          <p>Check out some of my personal and paid projects</p>
+          <p>Check out some of my personal</p>
         </div>
 
         <article className="project">
@@ -111,7 +110,7 @@ const App = () => {
               <div className="project-info">
                 <div className="project-bio">
                   <h3>{project}</h3>
-                  <p>React, Redux, SASS</p>
+                  <p>React</p>
                 </div>
 
                 <div className="project-link">
@@ -131,22 +130,16 @@ const App = () => {
       {/* Footer */}
       <footer id="footer">
         <div className="container">
-          <a href="mailto:communitypro47@gmail.com">communitypro47@gmail.com</a>
+          <a href="mailto:sujithb934@gmail.com">sujithb934@gmail.com</a>
           {/* Social Links */}
           <div className="social">
-            <a href="#" target="_blank"><img src="./assets/facebook-icon.svg" alt="Facebook" /></a>
-            <a href="#" target="_blank"><img src="./assets/twitter-icon.svg" alt="Twitter" /></a>
-            <a href="#" target="_blank"><img src="./assets/linkedin-icon.svg" alt="Linkedin" /></a>
-            <a href="#" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
-            <a href="#" target="_blank"><img src="./assets/hashnode-icon.svg" alt="Hashnode" /></a>
+            {/* <a href="#" target="_blank"><img src="./assets/facebook-icon.svg" alt="Facebook" /></a> */}
+            <a href="https://leetcode.com/u/sujith017/" target="_blank"><img src="" alt="Leetcode" /></a>
+            <a href="https://www.linkedin.com/in/sujith017/" target="_blank"><img src="" alt="Linkedin" /></a>
+            <a href="https://github.com/sujith017" target="_blank"><img src="" alt="GitHub" /></a>
+            {/* <a href="#" target="_blank"><img src="" alt="Hashnode" /></a> */}
           </div>
-          {/* Attribution */}
-          <div className="attribution">
-            <a href="https://github.com/CommunityPro/portfolio-html" target="_blank" rel="noopener noreferrer">
-              <img src="https://user-images.githubusercontent.com/62628408/157202263-9174da24-b19a-4017-9b7c-a1d26ae8f014.svg" alt="attribution" width="150px" />
-            </a>
-          </div>
-          <p>Copyright &copy; Communitypro {currentYear}, All rights reserved</p>
+
         </div>
       </footer>
     </div>
