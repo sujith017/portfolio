@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./App.css"; // Assuming you have CSS files like in your original code.
+import "./App.css";
 import logo from "./assets/logo.png";
 import moon from "./assets/moon.svg";
 import sun from "./assets/sun.svg";
