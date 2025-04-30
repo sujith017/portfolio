@@ -32,14 +32,14 @@ const projects = [
     name: "Hardware Enabled Root of Trust",
     tech: "Kotlin",
     image: "src/assets/project/project-four.png",
-    github: "https://github.com/yourusername/project-one",
+    github: "https://github.com/sujith017/hardware-root-of-trust.git",
     live: "https://project-one-demo.com",
   },
   {
     name: "E-Commerce Website",
     tech: "React.js",
     image: "src/assets/project/project-five.png",
-    github: "https://github.com/yourusername/project-one",
+    github: "https://github.com/sujith017/e-commerce-website.git",
     live: "https://project-one-demo.com",
   },
   {
